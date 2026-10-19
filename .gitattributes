@@ -1,0 +1,3 @@
+# This bundled stylesheet includes original site CSS and licensed animation libraries.
+# Count it as CSS rather than excluding the entire file as generated/vendor content.
+style.css linguist-generated=false linguist-vendored=false
