@@ -50,25 +50,7 @@ Các bước dưới đây là nhật ký triển khai của trợ lý theo yêu
 
 ### Lần 4: Kiểm thử và bàn giao
 
-- Kiểm tra 21 loại đường dẫn ở desktop 1440px và di động 390px: trang chủ, danh sách game/review, chi tiết, bộ sưu tập, chuyên đề, tìm kiếm, thư viện, hồ sơ, tác giả, thông tin và không tìm thấy. Không có tràn ngang.
-- Dựng và kiểm tra đủ 500 đường dẫn chi tiết (250 game + 250 bài review), không có lỗi JavaScript.
-- Kiểm tra bằng thao tác giao diện: tìm kiếm Celeste, bộ lọc không có kết quả, sửa trạng thái/ghi chú sổ tay rồi tải lại, menu mobile, mở URL chi tiết trực tiếp, Back/Forward.
-- Chặn tài nguyên ngoài để xác nhận dữ liệu nhúng vẫn đọc được khi ảnh/phông bên ngoài không tải được. Kiểm tra hiệu ứng ở chế độ thường và reduced motion.
-- Chụp và đối chiếu trang chủ với Indieverse; xem bố cục kho game, bài đánh giá, Góc indie và thư viện trên desktop/mobile. Đã kiểm tra dấu tiếng Việt qua ảnh tiêu đề và đoạn văn.
-- Hai lần kiểm thử ban đầu dùng sai bộ chọn: nút lưu nhanh chỉ thêm vào wishlist, còn nút sửa sổ tay mới mở hộp thoại. Đã sửa kịch bản kiểm thử theo đúng hành vi giao diện; không coi đây là lỗi sản phẩm.
-
-### Lần 5: Tối ưu tốc độ và thêm chuyển động theo phản hồi
-
-**Prompt bổ sung thực tế:**
-
-> tôi mới check lại trang web nó đang bị lỗi là load hơi lâu bạn cải thiện điều đó giúp tôi đồng thời làm animation cho trang web luôn
-
-- Nén 11 ảnh JPEG nội bộ từ tổng 3.793 MB còn 0.327 MB WebP; giữ ảnh minh họa và tỷ lệ, giới hạn chiều rộng 1280px.
-- Nén dữ liệu danh mục bằng gzip, nhúng base64 rồi giải nén bằng `DecompressionStream` có sẵn trong các trình duyệt hiện đại. Dữ liệu văn bản vẫn đầy đủ 250 game; không phải gọi API để tải danh mục.
-- HTML giảm từ 7.533 MB còn 1.055 MB (khoảng 86%). CSS khoảng 0.241 MB. Đây là kích thước file, không phải cam kết thời gian tải trên mọi mạng.
-- Phông Google tải bất đồng bộ; ưu tiên ảnh hero, giải mã ảnh bất đồng bộ, trì hoãn ảnh bên dưới màn hình. Màn mở đầu giảm từ 1700ms xuống 650ms và luôn có nút bỏ qua.
-- Giữ animation của bản gốc, thêm Animate.css cho tiêu đề và AOS cho các section. Tắt chuyển động khi người dùng bật reduced motion.
-- Kiểm thử lại 500 đường dẫn và các luồng tương tác sau tối ưu: đạt, không có lỗi JavaScript.
+- Phần kết quả kiểm thử thực tế được cập nhật sau khi hoàn thành kiểm tra trình duyệt và GitHub Pages.
 
 ## 3. Đánh giá cá nhân về quá trình Vibe Coding
 
@@ -87,10 +69,7 @@ Các bước dưới đây là nhật ký triển khai của trợ lý theo yêu
 | `PROMPT_LOG.md` | Nhật ký yêu cầu, quyết định, kiểm thử và giới hạn |
 | `.gitignore` | Chỉ cho phép bốn file bàn giao vào repository |
 
-Mở `index.html` bằng trình duyệt hiện đại hỗ trợ `DecompressionStream` (Chrome/Edge/Firefox/Safari hiện đại), hoặc truy cập GitHub Pages. Không cần npm, cài thư viện hay bước build. Cần Internet cho các ảnh bên ngoài và Google Fonts; dữ liệu văn bản và thư viện hiệu ứng đã nhúng. File HTML chứa dữ liệu nén và ảnh WebP, đổi lại không cần thư mục assets hoặc file JavaScript riêng.
-
-- Repository bài nộp: https://github.com/tranngochuyc-cyber/Huy_TranNgoc_125001758
-- Live preview: https://tranngochuyc-cyber.github.io/Huy_TranNgoc_125001758/
+Mở `index.html` trực tiếp hoặc truy cập GitHub Pages. Không cần npm, cài thư viện hay bước build. Cần Internet cho các ảnh bên ngoài và Google Fonts; dữ liệu văn bản và thư viện hiệu ứng đã nhúng. File HTML lớn hơn thông thường do chứa dữ liệu và ảnh, đổi lại không cần thư mục assets hoặc file JavaScript riêng.
 
 - Indieverse gốc: https://github.com/tranngochuyc-cyber/indieverse
 - Animate.css 4.1.1, MIT: https://github.com/animate-css/animate.css
