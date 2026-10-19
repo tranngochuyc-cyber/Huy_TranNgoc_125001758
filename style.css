@@ -1,5 +1,5 @@
-/*! Animate.css 4.1.1 | MIT License | https://animate.style/ */
 @charset "UTF-8";
+/*! Animate.css 4.1.1 | MIT License | https://animate.style/ */
 /*!
  * animate.css - https://animate.style/
  * Version - 4.1.1
@@ -3385,7 +3385,12 @@ transform:perspective(2500px) rotateX(0)}
 --text:#f5f3fa;
 --muted:#92909f;
 --purple:#b49afc;
---line:#302e3c}
+--line:#302e3c;
+--header-bg:#181720;
+--nav-link-color:#a8a5b4;
+--layout-max:1632px;
+--layout-gutter:57.6px;
+--card-hover-shadow:0 12px 32px #0003}
 *{
 box-sizing:border-box}
 html{
@@ -3415,15 +3420,15 @@ outline:2.4px solid var(--purple);
 outline-offset:4.8px}
 header{
 border-bottom:1.2px solid var(--line);
-background:#181720}
+background:var(--header-bg)}
 .nav-wrap{
-max-width:1632px;
+max-width:var(--layout-max);
 margin:auto;
 display:flex;
 align-items:center;
 justify-content:space-between;
 height:103.2px;
-padding:0 57.6px}
+padding:0 var(--layout-gutter)
 .logo{
 display:flex;
 align-items:center;
@@ -3451,7 +3456,7 @@ gap:38.4px;
 align-items:center}
 nav a{
 font-size:14.4px;
-color:#a8a5b4;
+color:var(--nav-link-color);
 position:relative;
 height:100%;
 display:flex;
@@ -3494,8 +3499,8 @@ width:40.8px;
 height:40.8px;
 font-size:12px}
 main{
-max-width:1632px;
-padding:0 57.6px;
+max-width:var(--layout-max);
+padding:0 var(--layout-gutter);
 margin:auto}
 .intro{
 display:flex;
@@ -11334,7 +11339,7 @@ outline-offset:4px}
 transition:transform .2s ease,box-shadow .2s ease}
 .review-card:hover,.dossier-tile:hover,.series-card:hover{
 transform:translateY(-3px);
-box-shadow:0 12px 32px #0003}
+box-shadow:var(--card-hover-shadow)}
 
 @media(prefers-reduced-motion:reduce){
 *,*::before,*::after{
