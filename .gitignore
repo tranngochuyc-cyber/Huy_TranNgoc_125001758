@@ -1,6 +1,9 @@
-# This project intentionally ships only four files.
+# Keep the static site, review data and submission documentation tracked.
 *
 !.gitignore
+!.gitattributes
+!README.md
 !PROMPT_LOG.md
 !index.html
 !style.css
+!review-data.json
