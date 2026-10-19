@@ -6864,7 +6864,7 @@ display:flex!important;
 flex-wrap:wrap;
 gap:9.6px;
 padding:15.6px}
-.library-sidebar h3,.library-sidebar>p,.library-sidebar .text-link,.library-sidebar .sidebar-settings,.library-sidebar>a[href^='/collections']{
+.library-sidebar h3,.library-sidebar>p,.library-sidebar .text-link,.library-sidebar .sidebar-settings,.library-sidebar>a:is([href^='/collections'],[href^='#/collections']){
 display:none}
 .library-sidebar>a{
 font-size:13.2px;
