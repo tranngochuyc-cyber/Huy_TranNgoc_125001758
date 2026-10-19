@@ -1,0 +1,6 @@
+# This project intentionally ships only four files.
+*
+!.gitignore
+!PROMPT_LOG.md
+!index.html
+!style.css
